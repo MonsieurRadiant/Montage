@@ -4,6 +4,7 @@ import MovieInfo from "./components/MovieInfo";
 import {Login} from "./components/Login/Login";
 import {Register} from "./components/Login/Register";
 import CoverPage from "./components/CoverPage";
+import RankList from "./components/RankList";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Navbar />
       <MovieInfo />
       <Login />
+      <RankList />
       <CoverPage />
     </div>
   );
