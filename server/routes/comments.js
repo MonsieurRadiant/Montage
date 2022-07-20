@@ -23,7 +23,7 @@ const Comment = mongoose.model('comment', commentSchema);
 
 const uri = "mongodb+srv://montage2022:cpsc455montage@cluster0.d2rpjlf.mongodb.net/montage";
 
-connectDb().catch(err => console.log(err));
+// connectDb().catch(err => console.log(err));
 async function connectDb() {
     await mongoose.connect(uri);
 }
@@ -59,6 +59,14 @@ router.post('/', async function (req, res, next) {
     // allComments[foundMovieIndex].commentList.push(commentsContent);
     // allComments[foundMovieIndex].totalRate += commentsContent.rate;
     // return res.send(allComments[foundMovieIndex]);
+});
+
+router.delete('/',  async function (req, res, next) {
+    //recipes.splice(req.body.index, 1);
+    comments.totalRate -= comments.commentList[req.body.index].rate;
+    comments.commentList.splice(req.body.index, 1);
+    await Comment.updateOne({MovieId: comments.MovieId},{$set:{commentList: comments.commentList, totalRate: comments.totalRate}})
+    return res.send(comments);
 });
 
 module.exports = router;

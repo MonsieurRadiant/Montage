@@ -1,6 +1,3 @@
-.genre-tag {
-
-}
 
 li{
 	display:inline-block;
@@ -13,7 +10,10 @@ li{
 }
 
 .genre-tag:hover {
-    color:blue;
+    color:#0000ff;
     background-color: #ddd;
 }
 
+input{
+    width: 10px;
+}

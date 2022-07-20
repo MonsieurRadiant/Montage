@@ -1,3 +1,4 @@
+import { notInitialized } from "react-redux/es/utils/useSyncExternalStore";
 import "./style/search.css"
 
 export default function Search() {
@@ -17,9 +18,10 @@ export default function Search() {
     ))
 
     let yearList = years.map((year) => (
-        <li className="genre-tag" name="choice">
-            {year}
-        </li>
+        <div className = "checkBoxContainer">
+        <input type="checkbox" className="genre-tag-box" id={year} name="choice"></input>
+        <label className = "genre-tag-label" for={year}>{year}</label><br></br>
+        </div>
     ))
     return (
         <div className = "Search">
