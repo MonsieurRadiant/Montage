@@ -8,6 +8,19 @@ router.get('/', (req, res) => {
   res.send('respond with a resource');
 });
 
+router.get('/:id', (req, res) => {
+  userModel.findById(req.params.id)
+  .then((data) => {
+        if (!data) {
+            return res.status(404).send();
+        }
+        res.send(data);
+  })
+  .catch((error) => {
+        res.status(500).send(error);
+  })
+});
+
 //SUBMIT A User info -- Sign Up
 router.post(`/signup`, (req, res) => {
   const {fullName, password} = req.body;

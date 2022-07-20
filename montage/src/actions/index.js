@@ -102,3 +102,10 @@ export const handleOnChangeMovieImage = input => {
         payload: input
     };
 }
+
+export const getUserData = (data) => {
+  return {
+    type: 'getUserData',
+    payload: data
+  }
+}
