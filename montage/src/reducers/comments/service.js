@@ -23,7 +23,7 @@ const addComment = async (comment) => {
     return data;
 };
 
-const deleteComment = async (index) => {
+const deleteComment = async (deleteData) => {
     const response = await fetch('https://cpsc455montageserver.herokuapp.com/comments', {
         method: 'DELETE',
         headers: {
