@@ -29,7 +29,7 @@ const deleteComment = async (index) => {
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({index: index})
+        body: JSON.stringify(deleteData)
     });
 
     const data = await response.json();
