@@ -19,7 +19,6 @@ const addComment = async (comment) => {
         const errorMsg = data?.message;
         throw new Error(errorMsg)
     }
-
     return data;
 };
 
@@ -31,13 +30,11 @@ const deleteComment = async (deleteData) => {
         },
         body: JSON.stringify(deleteData)
     });
-
     const data = await response.json();
     if (!response.ok) {
         const errorMsg = data?.message;
         throw new Error(errorMsg)
     }
-
     return data;
 };
 
