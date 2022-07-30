@@ -19,11 +19,10 @@ const addComment = async (comment) => {
         const errorMsg = data?.message;
         throw new Error(errorMsg)
     }
-
     return data;
 };
 
-const deleteComment = async (index) => {
+const deleteComment = async (deleteData) => {
     const response = await fetch('https://cpsc455montageserver.herokuapp.com/comments', {
         method: 'DELETE',
         headers: {
@@ -31,13 +30,11 @@ const deleteComment = async (index) => {
         },
         body: JSON.stringify(deleteData)
     });
-
     const data = await response.json();
     if (!response.ok) {
         const errorMsg = data?.message;
         throw new Error(errorMsg)
     }
-
     return data;
 };
 
