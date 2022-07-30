@@ -12,9 +12,6 @@ export default function Comments() {
     const userId = useSelector(state => state.others.userIdReducer);
     const userPreference = useSelector(state => state.others.userPreference);
 
-    // useEffect(() => {
-    //     dispatch(getCommentsAsync(movieId));
-    // }, []);
     const [commentContent, setCommentContent] = useState("")
     const [commentRate, setCommentRate] = useState(0)
     let isAbleToComment = commentContent !== "";
