@@ -59,14 +59,13 @@ All our data, such as the information of movies, and information of users are st
 Unit 5 – Release Engineering:<br />
 The structure of our repository is monorepo which makes two ends (client and server) easier to interact with each other and avoid diamond dependencies. In the branch we deploy our app, we use GitHub actions to automatically test whether our app can be built before deployment (Continuous Integration) and automatically deploy it to Heroku if it is deployable (Continuous Deployment). By doing so, we make sure that we have a branch of a stable and deployable version of our app and all changes to it can be automatically presented to the user.<br />
 <br />
-
 **Above and Beyond**:<br />
 We believe our search and recommendation functionality goes beyond the requirement of this course. Our search functionality uses regex (regular expression) to provide complex search functionalities that allow users to search based on a movie's title, rate, genre and year. Our recommendation functionality could recommend users movies they more likely would be interested in through an algorithm based on the genres of users' favourite movies. Moreover, our recommendation functionality would not recommend movies that have been recommended in the past 7 days or are in users' favourite movie list.<br />
 <br />
 **Further Improvement**:<br />
 The further improvement of this application aims to finish the incomplete stretch requirement to allow users to get notifications of the upcoming movies they selected. We also plan to further improve the user interface so it is more user-friendly and add more functionalities such as allowing users to provide descriptions for different movies to encourage more user-generated content on the website.<br />
 <br />
-**contributions:**<br />
+**Contributions:**<br />
 Andy Huang: Andy achieved Login and Signup functionalities for both the front and back end. He also engaged in constructing the navbar component and hamburger menu, and contributed a lot to the decoration of the user interface.<br />
 Aure Ma: Aure helped take the user information from the back end and store it in the front end reducer. She also helped in constructing the user profile page.<br />
 Edward Hu: Edward achieved comment and rate functionalities for both the front and back end. He constructed the search functionality in the back end and helped improve the recommendation algorithm. He also provided a lot of help in the construction of many components such as uploading and debugging a lot of them.<br />
