@@ -14,7 +14,7 @@ function UserProfile() {
     const userId = useSelector(state => state.persistReducer.userIdReducer.uid);
 
     const getProfileData = () => {
-        fetch(`http://localhost:3001/users/${userId}`, {method: 'GET'})
+        fetch(`https://cpsc455montageserver.herokuapp.com/users/${userId}`, {method: 'GET'})
             .then((response) => response.json())
             .then((data) => dispatch(getUserData(data)))
     }

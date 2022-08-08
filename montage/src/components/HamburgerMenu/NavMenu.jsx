@@ -87,7 +87,7 @@ export function NavMenu({isOpen}) {
 
     const handleLogout = (e) => {
         e.preventDefault();
-        fetch(`http://localhost:3001/users/logout/${userId}`, {method: 'GET'})
+        fetch(`https://cpsc455montageserver.herokuapp.com/users/logout/${userId}`, {method: 'GET'})
             .then((response) => response.json())
             .then((data) => {
                 dispatch(updateLoginState(data));
