@@ -1,9 +1,9 @@
 const getComments = async (movieTitle) => {
     const response = await fetch('https://cpsc455montageserver.herokuapp.com/comments/' + movieTitle, {
-      method: 'GET'
+        method: 'GET'
     });
     return response.json();
-  };
+};
 
 const addComment = async (comment) => {
     const response = await fetch('https://cpsc455montageserver.herokuapp.com/comments', {
@@ -41,8 +41,8 @@ const deleteComment = async (deleteData) => {
     return data;
 };
 
-  export default {
-      getComments,
-      addComment,
-      deleteComment
-  };
+export default {
+    getComments,
+    addComment,
+    deleteComment
+};

@@ -1,61 +1,81 @@
-.CoverPage{
-    max-height: 100%;
-    max-width: 100%;
-    display: block;
-  }
-  
-  .CoverPageDateContainer{
+.CoverPage {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    background-color: #f5c851;
+}
+
+.CoverPageDateContainer {
+    position: relative;
+    left: 580px;
+    top: 0px;
+}
+
+#Date {
     position: absolute;
-    top: 10%;
-    left: 15%;
-    height: 100px;
-    width: 100px;
-  }
-  
-  #Date{
+    font-size: 70px;
+    left: -320px;
+    top: 24px;
+}
+
+#Month {
     position: absolute;
-    font-size: 90px;
-  }
-  
-  #Month{
-    position: absolute;
-    left: 120px;
+    font-size: 25px;
     top: 30px;
-    font-size: 22px;
-  }
-  
-  #Year{
+    left: -240px;
+}
+
+#Year {
     position: absolute;
-    left: 170px;
+    font-size: 25px;
     top: 30px;
-    font-size: 22px;
-  }
-  
-  #Day{
+    bottom: 42px;
+    left: -170px;
+}
+
+#Day {
     position: absolute;
-    left: 120px;
-    top: 68px;
-    font-size: 22px;
-  }
-  
-  .CoverPagePoster{
-    position: absolute;
-    top: 25%;
-    left: 20%;
-    height: 480px;
+    font-size: 25px;
+    margin-left: -240px;
+    margin-top: 75px;
+}
+
+.img-wrapper {
+    position: relative;
+    left: 260px;
+    top: 130px;
+    height: 500px;
+}
+
+.zoom {
+    height: 500px;
     width: 360px;
-    display:block;
-  }
-  
-  .CoverPageCommentContainer{
+}
+
+.img-wrapper > img {
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+.CoverPageCommentContainer {
     position: absolute;
-    top: 35%;
-    left: 50%;
-    height: 300px;
-    width: 300px;
-  }
-  
-  #CoverPageComment1{
+    font-weight: bold;
+    left: 750px;
+    top: 300px;
+}
+
+#CoverPageComment1 {
     font-size: 30px;
-  }
-  
+    left: 100px;
+}
+
+#CoverPageComment2 {
+    position: absolute;
+    font-size: 30px;
+    left: 0px;
+    top: 120px;
+}
+
+.img-wrapper:hover > img.zoom {
+    transform: scale(1.1);
+}
